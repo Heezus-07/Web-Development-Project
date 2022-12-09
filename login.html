@@ -5,60 +5,97 @@
     <head>
 
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width-device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="C:\Users\school\Desktop\Project\loginstyle.css";>
+        <link rel="stylesheet" type="text/css" href="C:\Users\School\OneDrive - Milton Keynes College O365\Project\login.css";>
         <link rel="preconnect" href="https://fonts.googleapis.com">
-
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="use-credentials">
-
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
 
     </head>
 
     <body>
+        <div class="full-page">
+            <div class="home-overlay">
 
-        <!--login & sign-up page-->
+                 <!--header section-->
 
-        <div class="login">
-            <div class="container">
+             <header>
+                <a href="C:\Users\School\OneDrive - Milton Keynes College O365\Project\Main.html" class="logo">VOYAGEA</a>
+                <div class="bx bx-menu" id="menu-icon"></div>
 
-                <!-- go to Sign-up-->
+                <ul class="navbar">
+                    <li><a href="C:\Users\school\OneDrive - Milton Keynes College O365\Project\Main.html">Home</a></li>
+                    <li><a href="#package">Package</a></li>
+                    <li><a href="#destination">Destination</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="C:\Users\school\OneDrive - Milton Keynes College O365\Project\login_signup.html">Log In</a></li>
+                </ul>
+            </header>
 
-                <div class="col-left">
-                    <div class="login-text">
-                        <h2>WELCOME!</h2>
-                        <p>Create your account<br>For Free!</p>
-                        <a href="" class="btn">Sign Up</a>
+           
+
+            <!--login/Register section-->
+
+            <div id='login-form'class='login-page'>
+                <div class="form-box">
+
+                    <div class='button-box'>
+                        <div id='btn'></div>
+                        <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                        <button type='button'onclick='register()'class='toggle-btn'>Register</button>
                     </div>
-                </div>
 
-                <!--login section-->
+                    <form id='login' class='input-group-login'>
+                        <input type='text'class='input-field'placeholder='Email Id' required >
+                        <input type='password'class='input-field'placeholder='Enter Password' required>
+                        <input type='checkbox'class='check-box'><span>Remember Password</span>
+                        <button type='submit'class='submit-btn'>Log in</button>
+                    </form>
 
-                <div class="col-right">
-                    <div class="login-form">
-                        <h2>Login</h2>
-                        <form action="">
-                            <p>
-                                <label>Email<span>*</span></label>
-                                <input type="text" placeholder="Email" required>
-                            </p>
-
-                            <p>
-                                <label>Password<span>*</span></label>
-                                <input type="text" placeholder="Password" required>
-                            </p>
-
-                            <p>
-                                <input type="submit" value="Login">
-                            </p>
-
-                            <p>
-                                <a href="">Forgot password?</a>
-                            </p>
-                        </form>
-                    </div>
+                    <form id='register' class='input-group-register'>
+                        <input type='text'class='input-field'placeholder='First Name' required>
+                        <input type='text'class='input-field'placeholder='Last Name ' required>
+                        <input type='email'class='input-field'placeholder='Email Id' required>
+                        <input type='password'class='input-field'placeholder='Enter Password' required>
+                        <input type='password'class='input-field'placeholder='Confirm Password'  required>
+                        <input type='checkbox'class='check-box'><span>I agree to the terms and conditions</span>
+                        <button type='submit'class='submit-btn'>Register</button>
+                    </form>
                 </div>
             </div>
         </div>
+        </div>
+
+        <!--script section-->
+
+        <script>
+            var x=document.getElementById('login');
+            var y=document.getElementById('register');
+            var z=document.getElementById('btn');
+            function register()
+            {
+                x.style.left='-400px';
+                y.style.left='50px';
+                z.style.left='110px';
+            }
+            function login()
+            {
+                x.style.left='50px';
+                y.style.left='450px';
+                z.style.left='0px';
+            }
+        </script>
+        <!-- <script>
+            var modal = document.getElementById('login-form');
+            window.onclick = function(event) 
+            {
+                if (event.target == modal) 
+                {
+                    modal.style.display = "";
+                }
+            }
+        </script> -->
     </body>
 </html>
